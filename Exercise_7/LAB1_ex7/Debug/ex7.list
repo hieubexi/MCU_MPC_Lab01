@@ -769,7 +769,6 @@ int main(void)
  80006ac:	17db      	asrs	r3, r3, #31
  80006ae:	1ad3      	subs	r3, r2, r3
  80006b0:	613b      	str	r3, [r7, #16]
-		// clearNumberOnClock(hour - 1);
 		setNumberOnClock(hour);
  80006b2:	69b8      	ldr	r0, [r7, #24]
  80006b4:	f7ff fd94 	bl	80001e0 <setNumberOnClock>
@@ -781,9 +780,9 @@ int main(void)
  80006c0:	f7ff fd8e 	bl	80001e0 <setNumberOnClock>
 	}
 
-	time  = time + 5; // 0 5 10 15 20 25 30 55
+	time  = time + 1;
  80006c4:	69fb      	ldr	r3, [r7, #28]
- 80006c6:	3305      	adds	r3, #5
+ 80006c6:	3301      	adds	r3, #1
  80006c8:	61fb      	str	r3, [r7, #28]
 
 	HAL_Delay(1000);

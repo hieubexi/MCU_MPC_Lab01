@@ -349,7 +349,7 @@ int main(void)
 		setNumberOnClock(second_on_clock);
 	}
 
-	time  = time + 5; // 0 5 10 15 20 25 30 55
+	time  = time + 1;
 
 	HAL_Delay(1000);
   }
