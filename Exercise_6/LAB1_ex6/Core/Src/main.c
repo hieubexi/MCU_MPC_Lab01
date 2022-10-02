@@ -61,7 +61,7 @@ static void MX_GPIO_Init(void);
   * @brief  The application entry point.
   * @retval int
   */
-void deter_hour(int hour){
+void Test_led(int hour){
 
 	if(hour == 0){
 		HAL_GPIO_WritePin(L0_GPIO_Port, L0_Pin, RESET);
@@ -256,7 +256,7 @@ int main(void)
   {
     /* USER CODE END WHILE */
 	  if(hour >=12) hour = 0 ;
-	  deter_hour(hour);
+	  Test_led(hour);
 	  hour++;
 	  HAL_Delay(1000);
     /* USER CODE BEGIN 3 */
