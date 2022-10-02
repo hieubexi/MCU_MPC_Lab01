@@ -62,7 +62,7 @@ static void MX_GPIO_Init(void);
   * @retval int
 */
 void display7SEG(int num){
-//	if(num >= 10) num = 0 ;
+	//display 0
 	if(num == 0){
 		HAL_GPIO_WritePin(a_GPIO_Port, a_Pin, RESET);
 		HAL_GPIO_WritePin(b_GPIO_Port, b_Pin, RESET);
@@ -71,7 +71,9 @@ void display7SEG(int num){
 		HAL_GPIO_WritePin(e_GPIO_Port, e_Pin, RESET);
 		HAL_GPIO_WritePin(f_GPIO_Port, f_Pin, RESET);
 		HAL_GPIO_WritePin(g_GPIO_Port, g_Pin, SET);
-	}else if(num == 1){
+	}
+	//display 1
+	else if(num == 1){
 		HAL_GPIO_WritePin(a_GPIO_Port, a_Pin, SET);
 		HAL_GPIO_WritePin(b_GPIO_Port, b_Pin, RESET);
 		HAL_GPIO_WritePin(c_GPIO_Port, c_Pin, RESET);
@@ -79,7 +81,9 @@ void display7SEG(int num){
 		HAL_GPIO_WritePin(e_GPIO_Port, e_Pin, SET);
 		HAL_GPIO_WritePin(f_GPIO_Port, f_Pin, SET);
 		HAL_GPIO_WritePin(g_GPIO_Port, g_Pin, SET);
-	}else if(num == 2){
+	}
+	//display 2
+	else if(num == 2){
 		HAL_GPIO_WritePin(a_GPIO_Port, a_Pin, RESET);
 		HAL_GPIO_WritePin(b_GPIO_Port, b_Pin, RESET);
 		HAL_GPIO_WritePin(c_GPIO_Port, c_Pin, SET);
@@ -87,7 +91,9 @@ void display7SEG(int num){
 		HAL_GPIO_WritePin(e_GPIO_Port, e_Pin, RESET);
 		HAL_GPIO_WritePin(f_GPIO_Port, f_Pin, SET);
 		HAL_GPIO_WritePin(g_GPIO_Port, g_Pin, RESET);
-	}else if(num == 3){
+	}
+	//display 3
+	else if(num == 3){
 		HAL_GPIO_WritePin(a_GPIO_Port, a_Pin, RESET);
 		HAL_GPIO_WritePin(b_GPIO_Port, b_Pin, RESET);
 		HAL_GPIO_WritePin(c_GPIO_Port, c_Pin, RESET);
@@ -95,7 +101,9 @@ void display7SEG(int num){
 		HAL_GPIO_WritePin(e_GPIO_Port, e_Pin, SET);
 		HAL_GPIO_WritePin(f_GPIO_Port, f_Pin, SET);
 		HAL_GPIO_WritePin(g_GPIO_Port, g_Pin, RESET);
-	}else if( num == 4){
+	}
+	//display 4
+	else if( num == 4){
 		HAL_GPIO_WritePin(a_GPIO_Port, a_Pin, SET);
 		HAL_GPIO_WritePin(b_GPIO_Port, b_Pin, RESET);
 		HAL_GPIO_WritePin(c_GPIO_Port, c_Pin, RESET);
@@ -103,7 +111,9 @@ void display7SEG(int num){
 		HAL_GPIO_WritePin(e_GPIO_Port, e_Pin, SET);
 		HAL_GPIO_WritePin(f_GPIO_Port, f_Pin, RESET);
 		HAL_GPIO_WritePin(g_GPIO_Port, g_Pin, RESET);
-	}else if(num == 5){
+	}
+	//display 5
+	else if(num == 5){
 		HAL_GPIO_WritePin(a_GPIO_Port, a_Pin, RESET);
 		HAL_GPIO_WritePin(b_GPIO_Port, b_Pin, SET);
 		HAL_GPIO_WritePin(c_GPIO_Port, c_Pin, RESET);
@@ -111,7 +121,9 @@ void display7SEG(int num){
 		HAL_GPIO_WritePin(e_GPIO_Port, e_Pin, SET);
 		HAL_GPIO_WritePin(f_GPIO_Port, f_Pin, RESET);
 		HAL_GPIO_WritePin(g_GPIO_Port, g_Pin, RESET);
-	}else if(num == 6){
+	}
+	//display 6
+	else if(num == 6){
 		HAL_GPIO_WritePin(a_GPIO_Port, a_Pin, RESET);
 		HAL_GPIO_WritePin(b_GPIO_Port, b_Pin, SET);
 		HAL_GPIO_WritePin(c_GPIO_Port, c_Pin, RESET);
@@ -119,7 +131,9 @@ void display7SEG(int num){
 		HAL_GPIO_WritePin(e_GPIO_Port, e_Pin, RESET);
 		HAL_GPIO_WritePin(f_GPIO_Port, f_Pin, RESET);
 		HAL_GPIO_WritePin(g_GPIO_Port, g_Pin, RESET);
-	}else if(num == 7){
+	}
+	//display 7
+	else if(num == 7){
 		HAL_GPIO_WritePin(a_GPIO_Port, a_Pin, RESET);
 		HAL_GPIO_WritePin(b_GPIO_Port, b_Pin, RESET);
 		HAL_GPIO_WritePin(c_GPIO_Port, c_Pin, RESET);
@@ -127,7 +141,9 @@ void display7SEG(int num){
 		HAL_GPIO_WritePin(e_GPIO_Port, e_Pin, SET);
 		HAL_GPIO_WritePin(f_GPIO_Port, f_Pin, SET);
 		HAL_GPIO_WritePin(g_GPIO_Port, g_Pin, SET);
-	}else if (num == 8 ){
+	}
+	//display 8
+	else if (num == 8 ){
 		HAL_GPIO_WritePin(a_GPIO_Port, a_Pin, RESET);
 		HAL_GPIO_WritePin(b_GPIO_Port, b_Pin, RESET);
 		HAL_GPIO_WritePin(c_GPIO_Port, c_Pin, RESET);
@@ -135,7 +151,9 @@ void display7SEG(int num){
 		HAL_GPIO_WritePin(e_GPIO_Port, e_Pin, RESET);
 		HAL_GPIO_WritePin(f_GPIO_Port, f_Pin, RESET);
 		HAL_GPIO_WritePin(g_GPIO_Port, g_Pin, RESET);
-	}else{
+	}
+	//display 9
+	else{
 		HAL_GPIO_WritePin(a_GPIO_Port, a_Pin, RESET);
 		HAL_GPIO_WritePin(b_GPIO_Port, b_Pin, RESET);
 		HAL_GPIO_WritePin(c_GPIO_Port, c_Pin, RESET);
