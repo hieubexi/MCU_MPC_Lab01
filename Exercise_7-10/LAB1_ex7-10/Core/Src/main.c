@@ -236,35 +236,34 @@ void clearAllClock(){
 
 }
 void setNumberOnClock(int num){
-
 	if(num == 0 || num >= 12){
-		if(HAL_GPIO_ReadPin(L0_GPIO_Port, L0_Pin) == 1) HAL_GPIO_TogglePin(L0_GPIO_Port, L0_Pin);
+		if(HAL_GPIO_ReadPin(L0_GPIO_Port, L0_Pin) == 1) HAL_GPIO_TogglePin(L0_GPIO_Port, L0_Pin); //neu num = 0 hoac num = 12 thi hien thi so 0
 	}
-	else if(num == 1 && HAL_GPIO_ReadPin(L1_GPIO_Port, L1_Pin) == 1) HAL_GPIO_TogglePin(L1_GPIO_Port, L1_Pin);
-	else if(num == 2 && HAL_GPIO_ReadPin(L2_GPIO_Port, L2_Pin) == 1) HAL_GPIO_TogglePin(L2_GPIO_Port, L2_Pin);
-	else if(num == 3 && HAL_GPIO_ReadPin(L3_GPIO_Port, L3_Pin) == 1) HAL_GPIO_TogglePin(L3_GPIO_Port, L3_Pin);
-	else if(num == 4 && HAL_GPIO_ReadPin(L4_GPIO_Port, L4_Pin) == 1) HAL_GPIO_TogglePin(L4_GPIO_Port, L4_Pin);
-	else if(num == 5 && HAL_GPIO_ReadPin(L5_GPIO_Port, L5_Pin) == 1) HAL_GPIO_TogglePin(L5_GPIO_Port, L5_Pin);
-	else if(num == 6 && HAL_GPIO_ReadPin(L6_GPIO_Port, L6_Pin) == 1) HAL_GPIO_TogglePin(L6_GPIO_Port, L6_Pin);
-	else if(num == 7 && HAL_GPIO_ReadPin(L7_GPIO_Port, L7_Pin) == 1) HAL_GPIO_TogglePin(L7_GPIO_Port, L7_Pin);
-	else if(num == 8 && HAL_GPIO_ReadPin(L8_GPIO_Port, L8_Pin) == 1) HAL_GPIO_TogglePin(L8_GPIO_Port, L8_Pin);
-	else if(num == 9 && HAL_GPIO_ReadPin(L9_GPIO_Port, L9_Pin) == 1) HAL_GPIO_TogglePin(L9_GPIO_Port, L9_Pin);
-	else if(num == 10 && HAL_GPIO_ReadPin(L10_GPIO_Port, L10_Pin) == 1) HAL_GPIO_TogglePin(L10_GPIO_Port, L10_Pin);
-	else if(num == 11 && HAL_GPIO_ReadPin(L11_GPIO_Port, L11_Pin) == 1) HAL_GPIO_TogglePin(L11_GPIO_Port, L11_Pin);
+	else if(num == 1 && HAL_GPIO_ReadPin(L1_GPIO_Port, L1_Pin) == 1) HAL_GPIO_TogglePin(L1_GPIO_Port, L1_Pin); //hien thi so 1
+	else if(num == 2 && HAL_GPIO_ReadPin(L2_GPIO_Port, L2_Pin) == 1) HAL_GPIO_TogglePin(L2_GPIO_Port, L2_Pin); // hien thi so 2
+	else if(num == 3 && HAL_GPIO_ReadPin(L3_GPIO_Port, L3_Pin) == 1) HAL_GPIO_TogglePin(L3_GPIO_Port, L3_Pin); // hien thi so 3
+	else if(num == 4 && HAL_GPIO_ReadPin(L4_GPIO_Port, L4_Pin) == 1) HAL_GPIO_TogglePin(L4_GPIO_Port, L4_Pin); // hien thi so 4
+	else if(num == 5 && HAL_GPIO_ReadPin(L5_GPIO_Port, L5_Pin) == 1) HAL_GPIO_TogglePin(L5_GPIO_Port, L5_Pin); // hien thi so 5
+	else if(num == 6 && HAL_GPIO_ReadPin(L6_GPIO_Port, L6_Pin) == 1) HAL_GPIO_TogglePin(L6_GPIO_Port, L6_Pin); // hien thi so 6
+	else if(num == 7 && HAL_GPIO_ReadPin(L7_GPIO_Port, L7_Pin) == 1) HAL_GPIO_TogglePin(L7_GPIO_Port, L7_Pin); // hien thi so 7
+	else if(num == 8 && HAL_GPIO_ReadPin(L8_GPIO_Port, L8_Pin) == 1) HAL_GPIO_TogglePin(L8_GPIO_Port, L8_Pin); // hien thi so 8
+	else if(num == 9 && HAL_GPIO_ReadPin(L9_GPIO_Port, L9_Pin) == 1) HAL_GPIO_TogglePin(L9_GPIO_Port, L9_Pin); // hien thi so 9
+	else if(num == 10 && HAL_GPIO_ReadPin(L10_GPIO_Port, L10_Pin) == 1) HAL_GPIO_TogglePin(L10_GPIO_Port, L10_Pin); // hien thi so 10
+	else if(num == 11 && HAL_GPIO_ReadPin(L11_GPIO_Port, L11_Pin) == 1) HAL_GPIO_TogglePin(L11_GPIO_Port, L11_Pin); // hien thi so 11
 }
 void clearNumberOnClock(int num){
-	if((num == 0 || num >= 12) && HAL_GPIO_ReadPin(L0_GPIO_Port, L0_Pin) == 0) HAL_GPIO_TogglePin(L0_GPIO_Port, L0_Pin);
-	else if(num == 1 && HAL_GPIO_ReadPin(L1_GPIO_Port, L1_Pin) == 0) HAL_GPIO_TogglePin(L1_GPIO_Port, L1_Pin);
-	else if(num == 2 && HAL_GPIO_ReadPin(L2_GPIO_Port, L2_Pin) == 0) HAL_GPIO_TogglePin(L2_GPIO_Port, L2_Pin);
-	else if(num == 3 && HAL_GPIO_ReadPin(L3_GPIO_Port, L3_Pin) == 0) HAL_GPIO_TogglePin(L3_GPIO_Port, L3_Pin);
-	else if(num == 4 && HAL_GPIO_ReadPin(L4_GPIO_Port, L4_Pin) == 0) HAL_GPIO_TogglePin(L4_GPIO_Port, L4_Pin);
-	else if(num == 5 && HAL_GPIO_ReadPin(L5_GPIO_Port, L5_Pin) == 0) HAL_GPIO_TogglePin(L5_GPIO_Port, L5_Pin);
-	else if(num == 6 && HAL_GPIO_ReadPin(L6_GPIO_Port, L6_Pin) == 0) HAL_GPIO_TogglePin(L6_GPIO_Port, L6_Pin);
-	else if(num == 7 && HAL_GPIO_ReadPin(L7_GPIO_Port, L7_Pin) == 0) HAL_GPIO_TogglePin(L7_GPIO_Port, L7_Pin);
-	else if(num == 8 && HAL_GPIO_ReadPin(L8_GPIO_Port, L8_Pin) == 0) HAL_GPIO_TogglePin(L8_GPIO_Port, L8_Pin);
-	else if(num == 9 && HAL_GPIO_ReadPin(L9_GPIO_Port, L9_Pin) == 0) HAL_GPIO_TogglePin(L9_GPIO_Port, L9_Pin);
-	else if(num == 10 && HAL_GPIO_ReadPin(L10_GPIO_Port, L10_Pin) == 0) HAL_GPIO_TogglePin(L10_GPIO_Port, L10_Pin);
-	else if(num == 11 && HAL_GPIO_ReadPin(L11_GPIO_Port, L11_Pin) == 0) HAL_GPIO_TogglePin(L11_GPIO_Port, L11_Pin);
+	if((num == 0 || num >= 12) && HAL_GPIO_ReadPin(L0_GPIO_Port, L0_Pin) == 0) HAL_GPIO_TogglePin(L0_GPIO_Port, L0_Pin); // tat neu dang hien thi so 0
+	else if(num == 1 && HAL_GPIO_ReadPin(L1_GPIO_Port, L1_Pin) == 0) HAL_GPIO_TogglePin(L1_GPIO_Port, L1_Pin); // tat neu dang hien thi so 1
+	else if(num == 2 && HAL_GPIO_ReadPin(L2_GPIO_Port, L2_Pin) == 0) HAL_GPIO_TogglePin(L2_GPIO_Port, L2_Pin); // tat neu dang hien thi so 2
+	else if(num == 3 && HAL_GPIO_ReadPin(L3_GPIO_Port, L3_Pin) == 0) HAL_GPIO_TogglePin(L3_GPIO_Port, L3_Pin); // tat neu dang hien thi so 3
+	else if(num == 4 && HAL_GPIO_ReadPin(L4_GPIO_Port, L4_Pin) == 0) HAL_GPIO_TogglePin(L4_GPIO_Port, L4_Pin); // tat neu dang hien thi so 4
+	else if(num == 5 && HAL_GPIO_ReadPin(L5_GPIO_Port, L5_Pin) == 0) HAL_GPIO_TogglePin(L5_GPIO_Port, L5_Pin); // tat neu dang hien thi so 5
+	else if(num == 6 && HAL_GPIO_ReadPin(L6_GPIO_Port, L6_Pin) == 0) HAL_GPIO_TogglePin(L6_GPIO_Port, L6_Pin); // tat neu dang hien thi so 6
+	else if(num == 7 && HAL_GPIO_ReadPin(L7_GPIO_Port, L7_Pin) == 0) HAL_GPIO_TogglePin(L7_GPIO_Port, L7_Pin); // tat neu dang hien thi so 7
+	else if(num == 8 && HAL_GPIO_ReadPin(L8_GPIO_Port, L8_Pin) == 0) HAL_GPIO_TogglePin(L8_GPIO_Port, L8_Pin); // tat neu dang hien thi so 8
+	else if(num == 9 && HAL_GPIO_ReadPin(L9_GPIO_Port, L9_Pin) == 0) HAL_GPIO_TogglePin(L9_GPIO_Port, L9_Pin); // tat neu dang hien thi so 9
+	else if(num == 10 && HAL_GPIO_ReadPin(L10_GPIO_Port, L10_Pin) == 0) HAL_GPIO_TogglePin(L10_GPIO_Port, L10_Pin); // tat neu dang hien thi so 10
+	else if(num == 11 && HAL_GPIO_ReadPin(L11_GPIO_Port, L11_Pin) == 0) HAL_GPIO_TogglePin(L11_GPIO_Port, L11_Pin); // tat neu dang hien thi so 11
 }
 int main(void)
 {
