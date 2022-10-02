@@ -300,14 +300,10 @@ int main(void)
   int time = 0 ;
   int hour = time/3600 ;
   int minute = (time %3600 )/60 + 58;
-  //int second  =  time - minute*60 ;
   int second_on_clock = time / 5  ;
   int minute_on_clock = minute/5;
   int pre_hour  = hour ;
-  int first = 1 ;
-//  int dup_s = (second_on_clock == minute_on_clock ) || (second_on_clock == pre_hour) ;
-//  int dup_m = (second_on_clock == minute_on_clock ) || ( minute_on_clock == pre_hour)  ;
-//  int dup_h = ( minute_on_clock == pre_hour) || (second_on_clock == pre_hour) ;
+  int first = 1 ; 
   while (1)
   {
 	// turn on all of led when begin
