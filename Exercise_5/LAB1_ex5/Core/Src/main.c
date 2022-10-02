@@ -179,41 +179,48 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+	  // 5s dau 
 	  if( time < 5 ){
+		  	// bat den do 5s cua he thong 1
 	  		  HAL_GPIO_WritePin(LED1_RED_GPIO_Port, LED1_RED_Pin, GPIO_PIN_RESET) ;
 	  		  HAL_GPIO_WritePin(LED1_YELLOW_GPIO_Port, LED1_YELLOW_Pin, GPIO_PIN_SET) ;
 	  		  HAL_GPIO_WritePin(LED1_GREEN_GPIO_Port, LED1_GREEN_Pin, GPIO_PIN_SET) ;
+		  	//bat den vang cua he thong 2
 	  		  if(time < 3){
 	  		  		HAL_GPIO_WritePin(LED2_RED_GPIO_Port, LED2_RED_Pin, GPIO_PIN_SET) ;
-	  		  		HAL_GPIO_WritePin(LED2_YELLOW_GPIO_Port, LED2_YELLOW_Pin, GPIO_PIN_SET) ; // 0 1 2
+	  		  		HAL_GPIO_WritePin(LED2_YELLOW_GPIO_Port, LED2_YELLOW_Pin, GPIO_PIN_SET) ; 
 	  		  		HAL_GPIO_WritePin(LED2_GREEN_GPIO_Port, LED2_GREEN_Pin, GPIO_PIN_RESET) ;
-	  		  	    display7SEG(3 - time);
-	  		  }else if(time >= 3 ){
+	  		  	    display7SEG(3 - time); // dem nguoc bang led7SEG
+	  		  }
+		  	 // bat den xanh cua he thong 2
+		  	  else if(time >= 3 ){
 	  		  		HAL_GPIO_WritePin(LED2_RED_GPIO_Port, LED2_RED_Pin, GPIO_PIN_SET) ;
-	  		  		HAL_GPIO_WritePin(LED2_YELLOW_GPIO_Port, LED2_YELLOW_Pin, GPIO_PIN_RESET) ; // 3 4
+	  		  		HAL_GPIO_WritePin(LED2_YELLOW_GPIO_Port, LED2_YELLOW_Pin, GPIO_PIN_RESET) ; 
 	  		  		HAL_GPIO_WritePin(LED2_GREEN_GPIO_Port, LED2_GREEN_Pin, GPIO_PIN_SET) ;
-	  		  		display7SEG(5 - time);
+	  		  		display7SEG(5 - time);  // dem nguoc bang led7SEG
 	  		  }
 	  		  time++ ;
+		  //5s sau 
 	  	  }else if(time >= 5 && time < 10){
+		  	  // bat den do cua he thong 2
 	  		  HAL_GPIO_WritePin(LED2_RED_GPIO_Port, LED2_RED_Pin, GPIO_PIN_RESET) ;
 	  		  HAL_GPIO_WritePin(LED2_YELLOW_GPIO_Port, LED2_YELLOW_Pin, GPIO_PIN_SET) ;
 	  		  HAL_GPIO_WritePin(LED2_GREEN_GPIO_Port, LED2_GREEN_Pin, GPIO_PIN_SET) ;
 	  		  if(time < 8){
 	  		  		HAL_GPIO_WritePin(LED1_RED_GPIO_Port, LED1_RED_Pin, GPIO_PIN_SET) ;
 	  		  		HAL_GPIO_WritePin(LED1_YELLOW_GPIO_Port, LED1_YELLOW_Pin, GPIO_PIN_SET) ;
-	  		  		HAL_GPIO_WritePin(LED1_GREEN_GPIO_Port, LED1_GREEN_Pin, GPIO_PIN_RESET) ;  //5 6 7
-	  		  	    display7SEG(10 - time);
-
+	  		  		HAL_GPIO_WritePin(LED1_GREEN_GPIO_Port, LED1_GREEN_Pin, GPIO_PIN_RESET) ;  
+	  		  	    display7SEG(10 - time);  // dem nguoc bang led7SEG
 	  		  }else if(time >= 8 ){
 	  		  		HAL_GPIO_WritePin(LED1_RED_GPIO_Port, LED1_RED_Pin, GPIO_PIN_SET) ;
-	  		  		HAL_GPIO_WritePin(LED1_YELLOW_GPIO_Port, LED1_YELLOW_Pin, GPIO_PIN_RESET) ; // 9
+	  		  		HAL_GPIO_WritePin(LED1_YELLOW_GPIO_Port, LED1_YELLOW_Pin, GPIO_PIN_RESET) ; 
 	  		  		HAL_GPIO_WritePin(LED1_GREEN_GPIO_Port, LED1_GREEN_Pin, GPIO_PIN_SET) ;
-	  		  	    display7SEG(10 - time);
+	  		  	    display7SEG(10 - time);  // dem nguoc bang led7SEG
 	  		  		time++;
 	  		  }
 	  		  time++ ;
 	  	  }else {
+		  	//reset bien time
 	  		display7SEG(1);
 	  		time = 0 ;
 	  	  }
