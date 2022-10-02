@@ -93,14 +93,21 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   int time = 0 ;
   int state = 0 ;
+  /* 	state = 0: RED 
+  	state = 1: YELLOW
+	state = 2: GREEN
+	RED(5s) -> YELLOW(2s) -> GREEN(3s)
+  */
   while (1)
-  {
-	 if(state  >= 2 ){
+  {	
+
+	 if(state  >= 2 ){	// state = 2 -> led green turn on
 		 time += 1 ;
 		 HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET) ;
 		 HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET) ;
 		 HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_RESET) ;
-		 if(time >= 3){
+		 // neu thoi gian den xanh > 3s. chuyen trang thai va  reset time
+		 if(time >= 3){	
 			 time = 0 ;
 			 state = 0 ;
 		 }
@@ -109,6 +116,7 @@ int main(void)
 		 HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_SET) ;
 		 HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_RESET) ;
 		 HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET) ;
+		 // neu thoi gian den vang > 2s. chuyen trang thai va  reset time
 		 if(time >= 2){
 			 time = 0 ;
 			 state = 2 ;
@@ -119,15 +127,18 @@ int main(void)
 		 HAL_GPIO_WritePin(LED_RED_GPIO_Port, LED_RED_Pin, GPIO_PIN_RESET) ;
 		 HAL_GPIO_WritePin(LED_YELLOW_GPIO_Port, LED_YELLOW_Pin, GPIO_PIN_SET) ;
 		 HAL_GPIO_WritePin(LED_GREEN_GPIO_Port, LED_GREEN_Pin, GPIO_PIN_SET) ;
+		 // neu thoi gian den do > 5s. chuyen trang thai va  reset time
 		 if(time >= 5){
 			 time = 0 ;
 			 state = 1 ;
 		 }
 	 }
+	   HAL_Delay(1000) ;
     /* USER CODE END WHILE */
-	 HAL_Delay(1000) ;
-    /* USER CODE BEGIN 3 */
+	
+   
   }
+  /* USER CODE BEGIN 3 */
   /* USER CODE END 3 */
 }
 
