@@ -96,6 +96,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+	  // 5s dau tien cua he thong den 1
 	  if( time < 5 ){
 		  HAL_GPIO_WritePin(LED1_RED_GPIO_Port, LED1_RED_Pin, GPIO_PIN_RESET) ;
 		  HAL_GPIO_WritePin(LED1_YELLOW_GPIO_Port, LED1_YELLOW_Pin, GPIO_PIN_SET) ;
@@ -110,8 +111,9 @@ int main(void)
 		  		HAL_GPIO_WritePin(LED2_GREEN_GPIO_Port, LED2_GREEN_Pin, GPIO_PIN_SET) ;
 		  }
 		  time++ ;
+		  //5s tiep theo cua he thong den 2
 	  }else if(time >= 5 && time < 10){
-		  HAL_GPIO_WritePin(LED2_RED_GPIO_Port, LED2_RED_Pin, GPIO_PIN_RESET) ; x
+		  HAL_GPIO_WritePin(LED2_RED_GPIO_Port, LED2_RED_Pin, GPIO_PIN_RESET) ; 
 		  HAL_GPIO_WritePin(LED2_YELLOW_GPIO_Port, LED2_YELLOW_Pin, GPIO_PIN_SET) ;
 		  HAL_GPIO_WritePin(LED2_GREEN_GPIO_Port, LED2_GREEN_Pin, GPIO_PIN_SET) ;
 		  if(time < 8){
